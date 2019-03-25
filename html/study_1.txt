@@ -1,0 +1,73 @@
+    html5的新特性
+ 1. 语义化标签
+ 2. 音频播放
+ 3. canvas制图
+ 4. drag拖放元素
+ 5. html表单
+ 6. 客户端数据存储
+
+    html5语义化标签
+ 1. header 
+ 2. section
+ 3. footer
+ 4. nav
+ 5. article
+ 6. aside
+ 7. main
+
+
+                                        
+   浏览器的标准模式和怪异模式
+1. 在html/css还没有标准化时，不同的浏览器对html/css有着不同的解析,
+当html/css标准化后，浏览器要兼容标准化的网页和之前使用旧的解析方式的
+网页，就产生了标准模式和怪异模式，解析新网页使用标准模式，旧网页使用
+怪异模式。
+
+2. 通过文档声明DCTYPE来确定使用什么模式
+
+3. 标准模式计算盒子宽高是指内容的宽高，怪异模式则是内容加边框和内边距
+   标准模式对齐是基于基线，怪异模式是基于下边框
+
+   
+   xhtml和html的区别
+1. 标签必须正确嵌套
+2. 标签必须闭合，空标签用/>闭合
+3. 标签必须使用小写
+4. 必须使用根元素
+
+   
+   使用data-的好处
+1. data-属性用于存储页面或私有的自定义数据
+2. data-可以在html元素中自定义data属性
+3. data-可以被js调用
+
+
+   meta标签
+meta标签提供页面的元信息，是meta-information的缩写
+meta常用于定义页面的说明，关键字，最后修改日期，和其它的元数据。
+这些元数据将服务于浏览器（如何布局或重载页面），搜索引擎和其它网络服务。
+meta以名称/值传递
+属性 content,name,http-equiv,scheme
+content 定义与 http-equiv 或 name 属性相关的元信息
+name 主要用于描述网页，例如网页的关键字，叙述等
+http-equiv属性 相当于http的文件头属性
+
+name参数
+1.keywords  告诉搜索引擎网页的关键字
+2.description 告诉搜索引擎网页主要内容
+3.viewport 移动端窗口
+4.robots 定义搜索引擎爬虫的索引方式
+5.author 标注作者
+6.generator 标注编译器
+7.copyright 标注版权
+8.revisit-after 设置爬虫重返时间
+9.renderer 指定双核浏览器默认以何种方式渲染页面
+
+http-equiv参数
+1.charset 设定网页字符集
+2.X-UA-Compatible 用于告知浏览器以何种版本来渲染页面
+3.ache-control 指导浏览器如何缓存某个响应以及缓存多长时间
+4.expires 设定网页到期时间
+5.refresh 网页将在设定的时间内，自动刷新并调向设定的网址
+6.Set-Cookie 如果网页过期，那么这个网页存在本地的cookies也会被自动删除
+
