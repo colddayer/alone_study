@@ -6,22 +6,22 @@ canvas本身没有绘制能力，需要getContext()返
 
     HTML废弃标签
 <acronym>首字母的缩写
-<applet>java小应用程序，主要提供绘图功能
-<basefont>定义了基准字体
-<bgsound>添加背景音乐
-<big>放大字体
-<blink>实现闪烁效果
-<center>使内容居中
-<dir>目录列表
-<font>定义字体字号颜色
-<frame><frameset>
-<hgroup>给标题分组
+1.<applet>java小应用程序，主要提供绘图功能
+2.<basefont>定义了基准字体
+3.<bgsound>添加背景音乐
+4.<big>放大字体
+5.<blink>实现闪烁效果
+6.<center>使内容居中
+7.<dir>目录列表
+8.<font>定义字体字号颜色
+9.<frame><frameset>
+10.<hgroup>给标题分组
 <isindex>单行文本控件
-<marquee>滚动字幕
+11.<marquee>滚动字幕
 <multicol>实现多列布局
-<nobr>禁止换行
-<spacer>插入空白
-<strike>删除线
+12.<nobr>禁止换行
+13.<spacer>插入空白
+14.<strike>删除线
 
 
     IE6 bug
