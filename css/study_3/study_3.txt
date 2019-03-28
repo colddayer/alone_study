@@ -1,0 +1,73 @@
+    盒模型,box-sizing
+
+content>padding>border>margin 
+标准模型盒模型的宽高只是内容（content）的宽高 box-sizing : content-box
+IE模型中盒模型的宽高是内容(content)+填充(padding)+边框(border)的总宽高 box-sizing : border-box
+
+   
+    css3新特性,伪类,伪元素,锚伪类
+
+1.animation 名字 持续时间 延迟 速度曲线  播放次数 方向
+2.transition 名字 持续时间 延迟 速度曲线
+3.transform 旋转、缩放、移动、或倾斜
+4.选择器
+
+5.Font-face 特性
+Font-face 可以用来加载字体样式，而且它还能够加载服务器端的
+字体文件，让客户端显示客户端所没有安装的字体
+
+6.word-wrap
+text-overflow:ellipsis; 
+overflow:hidden;
+white-space:nowrap;
+设置或检索当当前行超过指定容器的边界时是否断开转行，文字此时已被打散
+
+7.文本渲染
+text-fill   text-stroke
+
+8.渐变 
+liner-gradient radio-gradient
+
+9.边框
+border-radius border-image border-shadow
+
+10.背景
+bg-clip 绘制区域 bg-size 尺寸 bg-origin 定位区域
+
+11.3D效果
+12.弹性布局
+13.媒体查询
+
+    伪类
+1.动态伪类(锚伪类)
+：hover   ：link   :visited   :active
+
+2.UI元素状态伪类
+:checked		选择所有选中的表单元素
+:disabled		选择所有禁用的表单元素
+:enabled		选择所有启用的表单元素
+
+3.nth选择器
+:first-child选择某个元素的第一个子元素；
+:last-child选择某个元素的最后一个子元素；
+:nth-child()选择某个元素的一个或多个特定的子元素；     
+:nth-last-child()选择某个元素的一个或多个特定的子元素，从这个元素的最后一个子元素开始算；
+:nth-of-type()选择指定的元素；
+:nth-last-of-type()选择指定的元素，从元素的最后一个开始计算；
+:first-of-type选择一个上级元素下的第一个同类子元素；
+:last-of-type选择一个上级元素的最后一个同类子元素；
+:only-child选择的元素是它的父元素的唯一一个了元素；
+:only-of-type选择一个元素是它的上级元素的唯一一个相同类型的子元素；
+:empty选择的元素里面没有任何内容
+
+    伪元素
+:first-letter	向文本的第一个字母添加特殊样式。	
+:first-line	    向文本的首行添加特殊样式。	
+:before	        在元素之前添加内容。	
+:after	        在元素之后添加内容
+
+    隐藏页面的方式
+将 opacity 设为 0
+将 visibility 设为 hidden
+将 display 设为 none 
+将 position 设为 absolute将位置设到不可见区域。
