@@ -21,3 +21,44 @@
     1.已知宽高,父相对定位,自身设为绝对定位,top,left,right,bottom:0,margin:auto
     2.父相对定位,自身设为绝对定位,left,top 50%,translate(-50%,-50%)
     3.父元素弹性布局 justify-content:center align-items:center
+
+    
+    position和display
+position:属性规定元素的定位类型
+    1.absolute 绝对定位 向parent节点层层查找 相对于设置了相对定位的元素定位,如果没有
+相对body定位
+    2.fixed 绝对定位 相对于浏览器窗口进行定位
+    3.relative 相对定位 相对自身原有位置进行定位
+
+display:属性规定元素应该生成的框的类型
+    1.none 此元素不被显示
+    2.block 此元素显示为块级元素
+    3.inline 此元素显示为行内元素
+    4.Inline-block 此元素显示为行内块级元素
+    5.显示为列表,显示为表格成分
+
+
+    box-sizing:border-box 作用及好处
+    将标准盒模型转化为ie盒模型,如何元素在设置了宽度后
+使用box-sizing:border-box后 使用padding才能正确缩进
+
+
+    浮动元素引起的问题和解决方法,绝对定位和相对定位,元素浮动后的display值
+浮动元素引起的问题:
+浮动元素无法撑开父级元素,可能使父级元素高度为0而塌陷
+浮动元素后面跟非浮动元素，非浮动元素会紧随其后浮动起来
+浮动元素影响页面结构
+
+absolute inline-block及block
+relative 和原来一致
+float变成inline-block
+所有表格列表元素不变
+
+
+    link与@import的区别
+1.link是XHTML标签，除了加载CSS外，还可以引用图片等资源文件；@import属于CSS范畴，只能加载CSS
+2.link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载
+3.link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持
+4.link支持使用Javascript控制DOM去改变样式；而@import不支持
+
+
