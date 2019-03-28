@@ -1,0 +1,23 @@
+    如何实现水平居中和重置居中
+水平居中：
+    行内元素 
+    1.将父级设为块级元素 然后text-align : center
+这样行内元素就会相对父级元素水平居中
+    块级元素  
+    1.设置宽度 然后margin: 0 auto
+    2.不设置宽度 把自己设为行内或行内块级 将父元素设为块级 父元素text-align : center
+    3.设置父级相对单位,自身设为绝对定位,先left:50%,然后在transform: translateX(-50%)
+    4.父元素弹性布局,并设置属性 justify-content:center
+    5.不设置高度,父相对定位,自身设为绝对定位,top,left,right,bottom:0,margin:auto
+垂直居中
+    行内元素
+    1.单行行内元素 设置行高等于父级高度
+    2.多行行内元素 给父级设置display:table-cell vertical-align:middle
+    块级元素
+    1.设置父级相对单位,自身设为绝对定位,先top:50%,然后在transform: translateY(-50%)
+    2.父元素弹性布局,并设置属性 align-items:center
+    3.不设置宽度,父相对定位,自身设为绝对定位,top,left,right,bottom:0,margin:auto
+水平垂直居中
+    1.已知宽高,父相对定位,自身设为绝对定位,top,left,right,bottom:0,margin:auto
+    2.父相对定位,自身设为绝对定位,left,top 50%,translate(-50%,-50%)
+    3.父元素弹性布局 justify-content:center align-items:center
