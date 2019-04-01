@@ -1,0 +1,26 @@
+        overflow:hidden的缺点
+    如果overflow:hidden块不设置绝对定位或相对定位
+则当子元素设置绝对定位时,溢出隐藏功能将失效
+
+
+        padding百分比是相对于父级宽度还是自身宽度
+    父级
+
+
+        css动画transition和animation的区别,animation的属性，加速度，重力模拟
+    1. 触发条件不同。transition通常和hover等事件配合使用，或js控制。animation则和gif动态图差不多，立即播放。
+    1. animation多两个参数 循环和动画方式
+    3. transition可控性相对较弱，只能够指定起始和结束的状态，而animation可以定义多个关键帧
+    4. animation动画在运行结束之后，需要回到初始状态
+    5. transition的作用，可以用一句话来概括“平滑改变CSS值”
+
+    animation属性
+    名字，持续时间，延迟时间，速度曲线，循环次数，方向
+
+
+        css3 如何实现旋转图片
+    transform:rotate
+
+        sass less
+        都是预编译语言
+
