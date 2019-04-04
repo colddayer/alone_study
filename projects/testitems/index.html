@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./matter.min.js"></script>
+</head>
+<body>
+    <script>
+        var Engine = Matter.Engine,
+            Render = Matter.Render,
+            World = Matter.World,
+            Bodies = Matter.Bodies;
+
+        var  engine = Engine.create(),
+             world = engine.world;
+
+        var render = Render.create({
+            engine:engine,
+            element:document.body
+        })
+
+            Engine.run(engine);
+            Render.run(render);
+
+            var boxA = Bodies.rectangle(400, 200, 80, 80);
+            var boxB = Bodies.rectangle(450, 50, 80, 80);
+            var circleA = Bodies.circle(400,0,40);
+            var polygon = Bodies.polygon(400,0,5,40);//x,y,sides,radius
+            var trapezoid = Bodies.trapezoid(400,0,80,40,1);//x,y,底部长度，高度，斜率
+            var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+            World.add(engine.world, [trapezoid,ground]);
+
+            
+
+
+    </script>
+</body>
+</html>
