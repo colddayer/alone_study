@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .wrap{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .left{
+        /* width: 200px; */
+        /* position: absolute;
+        left: 0; */
+        /* float: left; */
+        /* display: inline-block; */
+        background-color: green;
+    }
+    .right{
+        /* float: right; */
+        width: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: red;
+    }
+    .mid{
+        /* position: absolute;
+        left: 200px;
+        right: 200px; */
+        overflow: hidden;
+        background-color: pink;
+    }
+    .footer{
+        /* height: 1px; */
+        background-color: blue;
+        overflow: hidden;
+    }
+    .box{
+        background-color:orangered;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div class="left">left</div>
+    <div class="mid">mid</div>
+    <div class="right">right</div>
+    <div class="footer">footer</div>
+    </div>
+    <div class="box">123</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     #father {
+        width: 500px;
+        /* height: 300px; */
+        background-color: skyblue;
+        /* position: relative; */
+}
+ 
+    #son {
+        width: 100px;
+        height: 100px;
+        float: left;
+        background: white;
+        /* position: absolute;
+        background-color: green;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; */
+}
+#son1{
+        width: 100px;
+        height: 100px;
+        background: red;
+}
+    </style>
+</head>
+<body>
+        <div id="father">
+            <table id="son">我是块级元素</table>
+            <span id="son1">我是块级元素</span>
+        </div>
+        <script>
+            var son = document.getElementById("son");
+        </script>
+</body>
+</html>
