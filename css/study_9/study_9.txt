@@ -24,3 +24,8 @@
 4：父容器或子容器： float：left；（不能是auto）
 5：父容器或子容器：position：absolute；
 6：子容器：display：inline-block;(或是inline-table)
+
+
+        解释:伪元素单冒号和双冒号的区别
+    单冒号用于伪类，双冒号用于伪元素，
+    考虑兼容问题对于CSS2之前已有的伪元素，比如:before，单冒号和双冒号的写法::before作用是一样的
