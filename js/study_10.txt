@@ -1,0 +1,51 @@
+        js基本类型有哪些?引用类型有哪些?null和undefined的区别
+1.基本类型
+    Number,String,Boolean,null,undefined,syboml
+2.引用类型
+    Object,Function
+基本类型的数据是存放在栈内存中的，而引用类型的数据是存放在堆内存中的
+null 和 undefined的区别
+    当声明的变量还未被初始化时，变量的默认值为undefined
+    null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象
+
+
+        如何判断一个变量是Array类型，如何判断一个变量是Number类型
+判断Array
+    1. instance of
+    2. Object.prototype.toString.call()
+    3. 使用constructor方法
+    4. 使用isArray方法
+判断Number
+    1. type of
+    2. isNaN 方法
+
+
+        引用类型和基本类型有什么区别
+1.基本类型在栈区，引用类型在堆区
+2.基本类型的值无法改变，引用类型的值可以改变
+3.基本类型比较的是值，引用类型比较的是引用
+
+
+        js常见的dom操作api
+1.节点创建api
+    creatnode
+2.页面修改api
+    append
+3.节点查询api
+    get
+4.节点类型api
+    parentnode
+    childnodes
+    childrem
+5.元素属性api
+    attr
+6.事件api
+    onclick
+
+        
+        解释事件冒泡和事件捕获
+1.事件冒泡
+子元素和父元素具有相同事件监听，导致事件都发生
+2.事件捕获
+事件的处理将从DOM层次的根开始，而不是从触发事件的目标元素开始，
+事件被从目标元素的所有祖先元素依次往下传递
