@@ -1,0 +1,37 @@
+        事件委托，如何阻止冒泡，如何组织默认事件
+阻止事件冒泡
+e.stopPropagation();
+事件委托
+father.onclick = function(e){
+    var e = event||window.event,
+    var source = e.target||e.srcElement
+    if(source.nodeName == '子元素'){
+            操作
+    }
+    e.stopPropagation()
+}
+阻止默认事件
+preventDefault();
+
+
+        对闭包的理解，什么时候构成闭包，闭包实现方法，闭包优缺点
+1.理解
+闭包就是将函数内部和函数外部连接的一座桥梁
+
+2.作用
+它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中
+
+3.缺点
+内存消耗很大，会造成网页的性能问题，在IE中可能导致内存泄露
+
+
+        this有哪些使用场景，跟C,Java中的this有什么区别?如何改变this的值
+1.使用场景
+    1.函数有所属对象    2.全局      3.使用构造器new一个对象时       4.apply，call，bind改变了this的指向
+2.跟C,Java中的this
+
+
+        bind
+    bind()方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入 bind()方法的
+第一个参数作为 this，传入 bind() 方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的
+参数来调用原函数。
