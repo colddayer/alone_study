@@ -1,0 +1,30 @@
+        举例说明一个匿名函数的典型用例
+1.立即执行函数
+2.创建闭包
+3.构建命名空间
+4.链式调用
+
+
+        指出JS的宿主对象和原生对象的区别，为什么扩展JS内置对象不是好的做法？有哪些内置对象和内置函数？
+原生对象
+    Js已有的自带的api
+宿主对象
+    人为定义的对象
+扩展内置会产生比全局变量更大的污染
+总结
+本地对象就是ECMAScript中定义好的对象，如String、Date等，内置对象是本地对象中比较特殊的一种
+，它不用实例化，包括Global和Math，宿主对象就是BOM、DOM和自己定义的对象
+
+
+        document load和document DOMContentLoaded两个事件的区别
+1.当 onload 事件触发时，页面上所有的DOM，样式表，脚本，图片，flash都已经加载完成了。
+2.当 DOMContentLoaded 事件触发时，仅当DOM加载完成，不包括样式表，图片，flash。
+
+
+        [] === [] false
+        undefined === undefined true
+        [] == [] false
+
+
+        typeof能得到那些值
+1.number,string,null,undefined,obj,function
