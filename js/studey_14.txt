@@ -1,0 +1,35 @@
+        什么是use strict,好处，坏处
+1."严格模式"是一种在JavaScript代码运行时自动实行更严格解析和错误处理的方法
+优点：
+    1.消除js语法的一些不合理，不严谨之处，减少一些怪异行为
+    2.消除代码的一些不安全因素
+    3.提高编译效率，增加运行速度
+    4.为新版本js做铺垫
+缺点：
+    不能有效的将压缩js定义为严格模式
+
+
+        函数的作用域是什么，js有几种作用域
+        js没有块级作用域，只有函数作用域
+        全局和局部作用域
+
+
+        Js如何实现重载和多态
+1.根据函数arguments个数实现重载
+2.内部检测数据类型实现重载
+因为js没有重载所以，js可以直接根据函数名覆盖实现多态
+
+
+        常用数组api,字符串api
+数组
+    sort,reverse,pop,push,shift,unshift,splice,slice,indexOf,lastIndexOf,includes,join,
+map,every,find,findIndex,some,forEach,Array.from,Array.of,isArray
+字符串
+    split,slice,indexOf,lastIndexOf,includes,charAt,charCodeAt,fromCodeAt,toUpcase,
+toLowerCase,match
+
+
+        原生事件绑定,dom0,dom2的区别
+直接用on事件绑定，添加事件监听
+DOM0就是直接通过 onclick写在html里面的事件
+DOM2是通过addEventListener绑定的事件, 还有IE下的DOM2事件通过attachEvent绑定
