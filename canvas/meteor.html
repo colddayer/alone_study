@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .tree {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('http://www.jq22.com/css/img/xkbg.png');
+            background-size: 1000px 250px;
+            background-repeat: repeat-x;
+            background-position: center bottom;
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #4FB8FE 0%, #aaa 100%);
+            position: absolute;
+            opacity: 0.3;
+        }
+
+        #meteor {
+            position: absolute;
+        }
+
+        #star {
+            position: absolute;
+        }
+
+        #moon {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="meteor"></canvas>
+    <div class="bg"></div>
+    <div class="tree"></div>
+    <canvas id='star'></canvas>
+    <canvas id='moon'></canvas>
+    <script src="./tool.js"></script>
+    <script>
+        const meteorCanvas = document.getElementById('meteor');
+        const starCanvas = document.getElementById('star');
+        const moonCanvas = document.getElementById('moon');
+        const meteors = [], stars = [];
+
+        meteorCanvas.width = document.body.clientWidth;
+        meteorCanvas.height = document.body.clientHeight;
+        starCanvas.width = document.body.clientWidth;
+        starCanvas.height = document.body.clientHeight / 3;
+        moonCanvas.width = document.body.clientWidth;
+        moonCanvas.height = document.body.clientHeight / 3;
+        const meteorCtx = meteorCanvas.getContext('2d');
+        const starCtx = starCanvas.getContext('2d');
+        const moonCtx = moonCanvas.getContext('2d');
+
+        init();
+        animate();
+
+        function init() {
+            for (var i = 0; i < 4; i++) {
+                meteors[i] = new Meteor(Math.random() * meteorCanvas.width,
+                    -2 * meteorCanvas.height + Math.random() * meteorCanvas.height * 3,
+                    meteorCtx, Math.floor(Math.random() * 2) + 1.5, Math.PI / 7);
+                meteors[i].draw();
+            }
+            for (var i = 0; i < 60; i++) {
+                stars[i] = new Star(Math.random() * starCanvas.width, Math.random() * starCanvas.height,
+                    starCtx, Math.random());
+                stars[i].draw();
+            }
+            moon = new Moon(moonCanvas.width - 50, 50, moonCtx)
+            moon.draw();
+        }
+        function animate() {
+            starCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
+            meteorCtx.fillStyle = `rgba(0, 0, 0, 0.1)`;
+            meteorCtx.fillRect(0, 0, meteorCanvas.width, meteorCanvas.height);
+            for (let meteor of meteors)
+                meteor.move();
+            for (let star of stars)
+                star.move();
+            requestAnimationFrame(animate);
+        }
+        function recover() {
+            for (let meteor of meteors)
+                meteor = null;
+            for (let star of stars)
+                star = null;
+            moon = null;
+        }
+        window.onresize = function () {
+            meteorCanvas.width = document.body.clientWidth;
+            meteorCanvas.height = document.body.clientHeight;
+            starCanvas.width = document.body.clientWidth;
+            starCanvas.height = document.body.clientHeight / 3;
+            moonCanvas.width = document.body.clientWidth;
+            moonCanvas.height = document.body.clientHeight / 3;
+            recover();
+            init();
+        }
+    </script>
+</body>
+
+</html>
