@@ -1,0 +1,91 @@
+        web端cookie的设置和获取
+  //setCookie
+
+function setCookie(name, value) {
+       var days = 1;
+       var exp = new Date();
+       exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
+       document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+}
+　　//getCookie
+
+复制代码
+function getcookie(key) {
+            var strCookie = document.cookie;
+            var arrCookie = strCookie.split(";");
+            for (var m = 0; m < arrCookie.length; m++) {
+                var ac = $.trim(arrCookie[m]);
+                if (ac.indexOf(key + '=') != -1) {
+                    return ac.replace(key + '=', "");
+                }
+            }
+}
+
+
+        setTimeout和promise的执行顺序
+Promise 新建后立即执行
+then方法指定的回调函数，将在当前脚本所有同步任务执行完才会执行
+setTimeout定义的将会在脚本的最后输出
+
+
+        js的事件流模型
+捕获流
+冒泡流
+dom2 捕获流 -> 目标阶段 -> 冒泡流
+
+
+        navigator,location,history
+window.location属性提供 URL 相关的信息和操作方法
+
+location.href设置或获取当前页面 URL;
+location.protocol设置或获取当前 URL 的协议，包括冒号（:）;
+location.host设置或获取当前 URL域名，包括冒号（:）和端口;
+location.hostname设置或获取当前 URL域名,不包括端口;
+location.port设置或获取当前 URL端口;
+location.pathname设置或获取当前 URL路径部分，从根路径/开始;
+location.search设置或获取当前 URL查询字符串部分，从问号?开始;
+location.hash设置或获取当前 URL哈希值，从#开始;
+location.origin获取URL 的协议、域名和端口;
+
+window.navigator属性指向一个包含浏览器和系统信息的 Navigator 对象
+
+navigator.userAgent返回浏览器的 User Agent 字符串，浏览器的厂商和版本信息;
+navigator.platform属性返回用户的操作系统信息，比如MacIntel、Win32、Linux x86_64等;
+navigator属性返回一个字符串，表示浏览器的首选语言
+navigator.cookieEnabled检测浏览器是否开启cookie功能，返回一个布尔值
+navigator.onLine属性返回一个布尔值，表示用户当前在线还是离线（浏览器断线）
+navigator.geolocation属性返回一个 Geolocation 对象，包含用户地理位置的信息
+
+window.history属性指向 History 对象，它表示当前窗口的浏览历史
+
+history.length：当前窗口访问过的网址数量（包括当前网页）
+history.state：History 堆栈最上层的状态值 `
+history.back()：返回到上一个网址，等同于点击浏览器的后退键。对于第一个访问的网址，该方法无效果。
+history.forward()：前进到下一个网址，等同于点击浏览器的前进键。对于最后一个访问的网址，该方法无效果。
+history.go()：接受一个整数作为参数，以当前网址为基准，跳转到参数指定的网址
+
+
+        js垃圾回收机制
+标记清除
+工作原理：是当变量进入环境时，将这个变量标记为“进入环境”。当变量离开环境时，则将其标记为“离开环境”。
+标记“离开环境”的就回收内存。
+1.    垃圾回收器，在运行的时候会给存储在内存中的所有变量都加上标记。
+
+2.    去掉环境中的变量以及被环境中的变量引用的变量的标记。
+
+3.    再被加上标记的会被视为准备删除的变量。
+
+4.    垃圾回收器完成内存清除工作，销毁那些带标记的值并回收他们所占用的内存空间。
+
+引用计数
+工作原理：跟踪记录每个值被引用的次数。
+1.    声明了一个变量并将一个引用类型的值赋值给这个变量，这个引用类型值的引用次数就是1。
+
+2.    同一个值又被赋值给另一个变量，这个引用类型值的引用次数加1.
+
+3.    当包含这个引用类型值的变量又被赋值成另一个值了，那么这个引用类型值的引用次数减1.
+
+4.    当引用次数变成0时，说明没办法访问这个值了。
+
+5.    当垃圾收集器下一次运行时，它就会释放引用次数是0的值所占的内存。
+
